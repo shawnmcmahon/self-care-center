@@ -8,22 +8,30 @@
     <section class="heading">
       <h1 class="title">✨ Self Care Center ✨</h1>
     </section>
-    <section>
-    <section class="select-type-box">
+    <section class="login-page">
+      <h3 class="type-question-text">Please Enter Your Name</h3>
+      <article class="select-type-box-background">
+          <label for="poster-title">Name</label>
+            <input type="text" name="name-input" id="name-input" placeholder="Your Name Here">
+        </section>
+        <button class="receive-message hidden">Receive Message</button>
+      </article>
+    </section>
+    <section class="select-type-box hidden">
       <form>
-        <h3>Which type of message?</h3>
+        <h3 class="type-question-text hidden">Which type of message?</h3>
         <article class="select-type-box-background">
-          <section class="radio-options">
+          <section class="radio-options hidden">
             <input type="radio" name="type" value="affirmation">
             <label for="affirmation">affirmation</label>
             <input type="radio" name="type" value="mantra">
             <label for="mantra">mantra</label>
           </section>
-          <button class="receive-message">Receive Message</button>
+          <button class="receive-message hidden">Receive Message</button>
         </article>
       </form>
     </section>
-    <section class="message-display">
+    <section class="message-display hidden">
       <article class="message-display-box-background">
         <img class="default-placeholder-image" src="./assets/meditate.svg" alt="meditation icon">
         <h5 class="message hidden">Please select a message type.</h5>
