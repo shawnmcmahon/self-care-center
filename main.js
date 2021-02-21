@@ -41,3 +41,22 @@ var mantra = [
 
 //eventListeners
 receiveMessageButton.addEventListener('click', loadMessage);
+
+//functions and event handlerss
+function loadMessage(event) {
+  event.preventDefault();
+    //alert("Hey");
+   //hide the default placeholder image
+   placeholderImage.classList.add('hidden');
+   //unhide the message box
+   message.classList.remove('hidden');
+   console.log(affirmationSelected.checked);
+   console.log(mantraSelected.checked);
+  //if typeSelected is equal to the mantras array,
+   if (mantraSelected.checked) {
+   message.innerText = mantra[Math.floor(Math.random() * mantra.length)];
+ } else if (affirmationSelected.checked) {
+    message.innerText = affirmation[Math.floor(Math.random() * affirmation.length)];
+  }
+  //and show a random mantras index from the mantras array
+}
