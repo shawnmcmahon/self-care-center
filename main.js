@@ -7,15 +7,15 @@ var message = document.querySelector('.message');
 
 
 var nameInput = document.querySelector('#name-input');
-var nameInput2 = document.querySelector('.name-input');
 var nameInputBox = document.querySelector('.name-input-box-background');
 var loginPageElements = document.querySelector('.login-page');
 var enterNameBox = document.querySelector('.enter-name-text');
 var selectTypeBox = document.querySelector('.select-type-box');
-var submitButton = document.querySelector('submit-message');
-var typeQuestionText = document.querySelector('.type-question-test');
+var submitButton = document.querySelector('.submit-message');
+var typeQuestionText = document.querySelector('.type-question-text');
 var radioOptions = document.querySelector('.radio-options');
 var greetingMessage = document.querySelector('.greeting');
+var messageDisplay  = document.querySelector('.message-display');
 
 //arrays
 var affirmation = [
@@ -59,7 +59,7 @@ submitButton.addEventListener('click', loadMainPage);
 
 //functions and event handlerss
 function loadMessage(event) {
-  event.preventDefault();
+   event.preventDefault();
    //hide the default placeholder image
    placeholderImage.classList.add('hidden');
    //unhide the message box
@@ -75,19 +75,23 @@ function loadMessage(event) {
 
 function loadMainPage() {
   //Save the user's name
-  var userName = nameInput;
+  var userName = nameInput.value;
+  console.log(userName);
   //hide the input box element and submit button
   loginPageElements.classList.add('hidden');
   enterNameBox.classList.add('hidden');
 
   //unhide the radio buttons, receive message button and message box
-  //radioOptions.classList.remove('hidden');
-  //receiveMessageButton.classList.remove('hidden');
-  //selectTypeBox.classList.remove('hidden');
+  radioOptions.classList.remove('hidden');
+  receiveMessageButton.classList.remove('hidden');
+  selectTypeBox.classList.remove('hidden');
+  messageDisplay.classList.remove('hidden');
+  typeQuestionText.classList.remove('hidden');
+
 
 
   //dispaly the welcome message with the user's name
-  greetingMessage.innerText = `Welcome, ${userName}!`
+  greetingMessage.innerText = `Welcome, ${userName}!`;
 }
 
 //
