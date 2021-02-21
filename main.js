@@ -5,6 +5,18 @@ var receiveMessageButton = document.querySelector('.receive-message');
 var placeholderImage = document.querySelector('.default-placeholder-image');
 var message = document.querySelector('.message');
 
+
+var nameInput = document.querySelector('#name-input');
+var nameInput2 = document.querySelector('.name-input');
+var nameInputBox = document.querySelector('.name-input-box-background');
+var loginPageElements = document.querySelector('.login-page');
+var enterNameBox = document.querySelector('.enter-name-text');
+var selectTypeBox = document.querySelector('.select-type-box');
+var submitButton = document.querySelector('submit-message');
+var typeQuestionText = document.querySelector('.type-question-test');
+var radioOptions = document.querySelector('.radio-options');
+var greetingMessage = document.querySelector('.greeting');
+
 //arrays
 var affirmation = [
   "I forgive myself and set myself free",
@@ -42,21 +54,40 @@ var mantra = [
 //eventListeners
 receiveMessageButton.addEventListener('click', loadMessage);
 
+//when user presses enter load the main page function
+submitButton.addEventListener('click', loadMainPage);
+
 //functions and event handlerss
 function loadMessage(event) {
   event.preventDefault();
-    //alert("Hey");
    //hide the default placeholder image
    placeholderImage.classList.add('hidden');
    //unhide the message box
    message.classList.remove('hidden');
-   console.log(affirmationSelected.checked);
-   console.log(mantraSelected.checked);
   //if typeSelected is equal to the mantras array,
    if (mantraSelected.checked) {
    message.innerText = mantra[Math.floor(Math.random() * mantra.length)];
- } else if (affirmationSelected.checked) {
+  } else if (affirmationSelected.checked) {
     message.innerText = affirmation[Math.floor(Math.random() * affirmation.length)];
   }
   //and show a random mantras index from the mantras array
 }
+
+function loadMainPage() {
+  //Save the user's name
+  var userName = nameInput;
+  //hide the input box element and submit button
+  loginPageElements.classList.add('hidden');
+  enterNameBox.classList.add('hidden');
+
+  //unhide the radio buttons, receive message button and message box
+  //radioOptions.classList.remove('hidden');
+  //receiveMessageButton.classList.remove('hidden');
+  //selectTypeBox.classList.remove('hidden');
+
+
+  //dispaly the welcome message with the user's name
+  greetingMessage.innerText = `Welcome, ${userName}!`
+}
+
+//
