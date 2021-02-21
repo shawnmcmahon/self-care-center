@@ -1,23 +1,18 @@
-//querySelectors
 var affirmationSelected = document.querySelector('input[value="affirmation"]');
-var mantraSelected = document.querySelector('input[value="mantra"]');
-var receiveMessageButton = document.querySelector('.receive-message');
-var placeholderImage = document.querySelector('.default-placeholder-image');
-var message = document.querySelector('.message');
-
-
-var nameInput = document.querySelector('#name-input');
-var nameInputBox = document.querySelector('.name-input-box-background');
-var loginPageElements = document.querySelector('.login-page');
 var enterNameBox = document.querySelector('.enter-name-text');
+var greetingMessage = document.querySelector('.greeting');
+var loginPageElements = document.querySelector('.login-page');
+var mantraSelected = document.querySelector('input[value="mantra"]');
+var message = document.querySelector('.message');
+var messageDisplay  = document.querySelector('.message-display');
+var nameInput = document.querySelector('#name-input');
+var placeholderImage = document.querySelector('.default-placeholder-image');
+var radioOptions = document.querySelector('.radio-options');
+var receiveMessageButton = document.querySelector('.receive-message');
 var selectTypeBox = document.querySelector('.select-type-box');
 var submitButton = document.querySelector('.submit-message');
 var typeQuestionText = document.querySelector('.type-question-text');
-var radioOptions = document.querySelector('.radio-options');
-var greetingMessage = document.querySelector('.greeting');
-var messageDisplay  = document.querySelector('.message-display');
 
-//arrays
 var affirmation = [
   "I forgive myself and set myself free",
   "I believe I can be all that I want to be.",
@@ -51,47 +46,36 @@ var mantra = [
   "I am the sky, the rest is weather."
 ];
 
-//eventListeners
 receiveMessageButton.addEventListener('click', loadMessage);
 
-//when user presses enter load the main page function
 submitButton.addEventListener('click', loadMainPage);
 
-//functions and event handlerss
 function loadMessage(event) {
    event.preventDefault();
-   //hide the default placeholder image
+
    placeholderImage.classList.add('hidden');
-   //unhide the message box
+
    message.classList.remove('hidden');
-  //if typeSelected is equal to the mantras array,
+
    if (mantraSelected.checked) {
-   message.innerText = mantra[Math.floor(Math.random() * mantra.length)];
-  } else if (affirmationSelected.checked) {
+    message.innerText = mantra[Math.floor(Math.random() * mantra.length)];
+    } else if (affirmationSelected.checked) {
     message.innerText = affirmation[Math.floor(Math.random() * affirmation.length)];
-  }
-  //and show a random mantras index from the mantras array
+    }
+
 }
 
 function loadMainPage() {
-  //Save the user's name
   var userName = nameInput.value;
-  console.log(userName);
-  //hide the input box element and submit button
+
   loginPageElements.classList.add('hidden');
   enterNameBox.classList.add('hidden');
 
-  //unhide the radio buttons, receive message button and message box
   radioOptions.classList.remove('hidden');
   receiveMessageButton.classList.remove('hidden');
   selectTypeBox.classList.remove('hidden');
   messageDisplay.classList.remove('hidden');
   typeQuestionText.classList.remove('hidden');
 
-
-
-  //dispaly the welcome message with the user's name
   greetingMessage.innerText = `Welcome, ${userName}!`;
 }
-
-//
