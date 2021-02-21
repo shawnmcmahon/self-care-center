@@ -1,4 +1,149 @@
-/* font-family: 'Quicksand', sans-serif;
+/* Global Rules */
+*,
+*:before,
+*:after {
+  text-align: center;
+}
+
+
+body {
+  background: linear-gradient(to top, #f7e4bf, #78a7c6, #134d71);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+h3 {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+h5 {
+  color: #000000;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+input[type=radio] {
+  transform: translate(100%, 0%);
+  top: 30%;
+  left: 30%;
+  padding: 0px 0px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+label {
+  position: flex;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  padding-left: 50px;
+  padding-right: 50px;
+  left: 60%;
+  top: 60%
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  height: 20px;
+}
+
+.default-placeholder-image{
+  width: 75px;
+  height: auto;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+.hidden {
+  display: none!important;
+}
+
+.message-display-box-background{
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  width: 850px;
+  display: flex;
+
+}
+
+
+.receive-message{
+  background-color: #134d71;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  height: 30px;
+  width: 175px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  white-space: nowrap;
+  margin-top: 30px;
+}
+
+
+.select-type-box {
+  padding: 150px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-type-box-background {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  justify-content: center;
+  width: 500px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  margin: 0px;
+
+}
+
+
+
+
+
+
+/* font-family:
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
