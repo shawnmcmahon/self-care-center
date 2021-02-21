@@ -28,6 +28,8 @@ link provided in Github.
 
 ### Deploy Link
 
+https://shawnmcmahon.github.io/self-care-center/
+
 
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
