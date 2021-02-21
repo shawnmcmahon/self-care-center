@@ -10,9 +10,6 @@ body {
   background: linear-gradient(to top, #f7e4bf, #78a7c6, #134d71);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,27 +19,24 @@ h1 {
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 
 h3 {
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
 }
 
 h5 {
   color: #000000;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
   font-size: 18px;
   font-weight: 500;
 
@@ -53,9 +47,6 @@ input[type=radio] {
   top: 30%;
   left: 30%;
   padding: 0px 0px;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
 }
 
 label {
@@ -66,18 +57,12 @@ label {
   padding-right: 50px;
   left: 60%;
   top: 60%
-  border: 3px;
-  border-color: red;
-  border-style: solid;
   height: 20px;
 }
 
 .default-placeholder-image{
   width: 75px;
   height: auto;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
 }
 
 .hidden {
@@ -95,6 +80,19 @@ label {
 
 }
 
+.name-input-box-background {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  justify-content: center;
+  width: 500px;
+  margin: 0px;
+
+}
+
 
 .receive-message{
   background-color: #134d71;
@@ -104,9 +102,6 @@ label {
   font-size: 13px;
   height: 30px;
   width: 175px;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
   white-space: nowrap;
   margin-top: 30px;
 }
@@ -114,9 +109,6 @@ label {
 
 .select-type-box {
   padding: 150px;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,11 +123,20 @@ label {
   height: 100px;
   justify-content: center;
   width: 500px;
-  border: 3px;
-  border-color: red;
-  border-style: solid;
   margin: 0px;
 
+}
+
+.submit-message {
+  background-color: #134d71;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  height: 30px;
+  width: 175px;
+  white-space: nowrap;
+  margin-top: 30px;
 }
 
 
