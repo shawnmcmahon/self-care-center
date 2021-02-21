@@ -38,3 +38,6 @@ var mantra = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
+
+//eventListeners
+receiveMessageButton.addEventListener('click', loadMessage);
